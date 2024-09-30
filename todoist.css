@@ -1,0 +1,10 @@
+.CyYcjJUieBpMa9EpeaMCgT06VDxGmHUC {
+    display: block; /* or inline-block */
+    transition: margin-left 0.2s ease;
+}
+
+
+.CyYcjJUieBpMa9EpeaMCgT06VDxGmHUC:hover {
+    margin-left: 10px !important;
+}
+

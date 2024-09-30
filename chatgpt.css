@@ -1,0 +1,102 @@
+.no-draggable.group.relative.rounded-lg:hover {
+    margin-left: 10px !important;
+    transition: margin-left 0.2s ease;
+}
+
+.gizmo-bot-avatar {
+    content: url('https://cdn.discordapp.com/emojis/1245456048383459439.webp?size=240&quality=lossless');
+    width: 32px;  /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+}
+
+
+.gizmo-shadow-stroke {
+    content: url('https://cdn.discordapp.com/emojis/1245456048383459439.webp?size=240&quality=lossless');
+    width: px;  /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+}
+
+
+.flex.h-full.w-full.flex-col.px-3,
+.flex.h-9.items-center {
+    position: relative !important; /* Ensure the pseudo-element is properly positioned */
+    overflow: hidden !important; /* Prevent any overflow issues with the noise effect */
+}
+
+.flex.h-full.w-full.flex-col.px-3::before,
+.flex.h-9.items-center::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important; /* Allow interaction with the element's content */
+    z-index: 1 !important; /* Ensure the noise effect is above the element's background but below other elements */
+    background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important; /* Apply noise SVG as background */
+    opacity: 0.3 !important; /* Adjust opacity for a subtle grain effect */
+}
+
+.flex.h-full.w-full.flex-col.px-3 {
+    background-color: #001f3f !important; /* Dark blue background */
+}
+
+.flex.flex-col.text-sm.md\\:pb-9 {
+    background-color: #001f3f !important; /* Dark blue background */
+}
+
+.text-base.px-3.md\\:px-4.m-auto.w-full.md\\:px-5.lg\\:px-4.xl\\:px-5 {
+    background-color: #001f3f !important; /* Dark blue background */
+}
+
+.flex.h-9.items-center {
+    background-color: #001f3f !important; /* Dark blue background */
+}
+
+.flex.h-full.w-full.flex-col.px-3,
+.flex.h-9.items-center,
+.absolute.bottom-0.top-0.to-transparent.ltr\:right-0.ltr\:bg-gradient-to-l.rtl\:left-0.rtl\:bg-gradient-to-r.from-token-sidebar-surface-primary.from-token-sidebar-surface-primary.can-hover\:group-hover\:from-token-sidebar-surface-secondary.w-8.from-0\%.can-hover\:group-hover\:w-10.can-hover\:group-hover\:from-60\% {
+    position: relative !important; /* Ensure the pseudo-element is properly positioned */
+    overflow: hidden !important; /* Prevent any overflow issues with the noise effect */
+}
+
+.flex.h-full.w-full.flex-col.px-3::before,
+.flex.h-9.items-center::before,
+.absolute.bottom-0.top-0.to-transparent.ltr\:right-0.ltr\:bg-gradient-to-l.rtl\:left-0.rtl\:bg-gradient-to-r.from-token-sidebar-surface-primary.from-token-sidebar-surface-primary.can-hover\:group-hover\:from-token-sidebar-surface-secondary.w-8.from-0\%.can-hover\:group-hover\:w-10.can-hover\:group-hover\:from-60\%::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important; /* Allow interaction with the element's content */
+    z-index: 1 !important; /* Ensure the noise effect is above the element's background but below other elements */
+    background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important; /* Apply noise SVG as background */
+    opacity: 0.3 !important; /* Adjust opacity for a subtle grain effect */
+}
+
+.min-h-4 {
+    position: relative !important;
+    color: transparent !important; /* Hide the original text */
+    font-size: inherit; /* Keep original font size */
+    display: flex !important; /* Use flexbox for centering */
+    align-items: center !important; /* Center vertically */
+    justify-content: center !important; /* Center horizontally */
+}
+
+.min-h-4::after {
+    content: 'ChatGPT just like me fr fr: never makes any mistakes.'; /* Custom text */
+    position: absolute;
+    left: 36%;
+    width: 100%;
+    height: 100%;
+    color: #b1adad !important; /* Light blue color for the text */
+    font-size: inherit; /* Match the current font size */
+    text-align: left; /* Align text as needed */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+}
+
+
+
+
