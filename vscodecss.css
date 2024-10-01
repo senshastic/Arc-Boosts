@@ -1,0 +1,88 @@
+.monaco-tl-row {
+    transition: padding-left 0.3s ease; /* Use padding instead of margin for animation */
+}
+
+.monaco-tl-row:hover {
+    padding-left: 10px !important; /* Shift using padding instead of margin */
+}
+
+
+@font-face {
+    font-family: 'CC Wild Words';
+    src: local('c');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CMU Concrete';
+    src: local('c');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Whitney';
+    src: local('c');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.monaco-icon-name-container, 
+.label-name, 
+.monaco-highlighted-label {
+    font-family: 'CC Wild Words', sans-serif !important;
+}
+
+/* Define the keyframes for the stronger glowing animation */
+@keyframes glowBreathing {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 1),    
+      0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 0.9),
+      0 0 40px rgba(255, 255, 0, 0.8),
+      0 0 50px rgba(255, 165, 0, 0.7),
+      0 0 60px rgba(255, 69, 0, 0.6);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(255, 255, 255, 1),    
+      0 0 25px rgba(255, 255, 255, 1),
+      0 0 35px rgba(255, 255, 0, 1),
+      0 0 45px rgba(255, 165, 0, 0.9),
+      0 0 55px rgba(255, 69, 0, 0.8),
+      0 0 65px rgba(255, 0, 0, 0.7);
+  }
+}
+
+/* Apply the stronger glow breathing animation to each class */
+
+.monaco-decoration-itemColor--qbi6iu {
+  color: #ffffff !important;  /* Set text color to white */
+  animation: glowBreathing 2.5s infinite alternate;  /* Apply the animation */
+}
+
+.monaco-decoration-itemColor-r3gonq.monaco-decoration-itemBadge-r3gonq.monaco-decoration-iconBadge-r3gonq {
+  color: #ffffff !important;  /* Set text color to white */
+  animation: glowBreathing 2.5s infinite alternate;  /* Apply the animation */
+}
+
+.monaco-decoration-itemColor-kkyaq5.monaco-decoration-itemBadge-kkyaq5.monaco-decoration-iconBadge-kkyaq5 {
+  color: #ffffff !important;  /* Set
+   text color to white */
+  animation: glowBreathing 2.5s infinite alternate;  /* Apply the animation */
+}
+
+.codicon-accounts-view-bar-icon {
+  background-image: url('https://cdn.discordapp.com/emojis/1245456048383459439.webp?size=240&quality=lossless');
+  background-size: 100% 100%; /* Scale the image to fit the element completely */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: inline-block !important; /* Ensure the display property is set correctly, override if needed */
+  width: 32px !important; /* Set width */
+  height: 32px !important; /* Set height */
+  padding: 0 !important; /* Remove any padding that might be affecting size */
+  text-indent: -9999px; /* Hide the original text content, if any */
+  overflow: hidden; /* Hide overflow */
+  margin-left: 9px !important; /* Move the element to the right by 10 pixels */
+}
