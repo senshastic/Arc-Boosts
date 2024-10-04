@@ -147,28 +147,57 @@
     }
 
     function addFooter() {
-        let mainElement = document.querySelector('main');
+    let mainElement = document.querySelector('main');
 
-        if (mainElement) {
-            // Create a new footer element
-            let footer = document.createElement('a');
-            footer.href = 'https://github.com/senshastic';
-            footer.innerText = 'SneshCorp. @1984. All rights reserved (to FallenStar).';
-            footer.style.position = 'fixed';
-            footer.style.bottom = '10px';
-            footer.style.right = '10px';
-            footer.style.fontSize = '12px';
-            footer.style.color = 'rgba(255, 255, 255, 0.7)';
-            footer.style.textDecoration = 'none';
-            footer.style.zIndex = '2000';
+    if (mainElement) {
+        let footer = document.createElement('div');
+        footer.style.position = 'fixed';
+        footer.style.bottom = '10px';
+        footer.style.right = '10px';
+        footer.style.fontSize = '12px';
+        footer.style.color = 'rgba(255, 255, 255, 0.7)';
+        footer.style.zIndex = '2000';
 
-            // Append footer to the main element
-            mainElement.appendChild(footer);
-        } else {
-            // Retry if the main element is not found
-            setTimeout(addFooter, 500); // 500ms delay
-        }
+        // Create the link for "SneshCorp."
+        let linkSensha = document.createElement('a');
+        linkSensha.href = 'https://github.com/senshastic';
+        linkSensha.innerText = 'SneshCorp. @1984. All rights reserved (to ';
+        linkSensha.style.textDecoration = 'none'; 
+        linkSensha.style.color = 'rgba(255, 255, 255, 0.7)';
+
+        // Create the link for "FallenStar"
+        let linkFallenStar = document.createElement('a');
+        linkFallenStar.href = 'https://github.com/senshastic'; 
+        linkFallenStar.innerText = 'FallenStar';
+        linkFallenStar.style.textDecoration = 'none'; 
+        linkFallenStar.style.color = 'rgba(255, 255, 255, 0.7)';
+
+        // Change href on hover
+        linkFallenStar.addEventListener('mouseenter', function() {
+            linkFallenStar.href = 'https://github.com/FallenStar08';
+        });
+
+        linkFallenStar.addEventListener('mouseleave', function() {
+            linkFallenStar.href = 'https://github.com/senshastic';
+        });
+
+        // Add punctuation and complete footer text
+        let endText = document.createTextNode(').');
+
+        // Append everything to the footer
+        footer.appendChild(linkSensha);
+        footer.appendChild(linkFallenStar);
+        footer.appendChild(endText);
+
+        // Append footer to the main element
+        mainElement.appendChild(footer);
+    } else {
+        // Retry if the main element is not found
+        setTimeout(addFooter, 500); // 500ms delay
     }
+}
+
+
   
     // Initialize all functionalities
     initializeSidebar();
