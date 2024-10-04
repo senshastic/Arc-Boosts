@@ -1,4 +1,4 @@
-# Snesh's little CSS fourre-tout 
+# Snesh's little CSS (and JS) fourre-tout 
 
 <br> 
 
