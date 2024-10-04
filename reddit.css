@@ -98,6 +98,15 @@ faceplate-menu {
   border-radius: 12px; /* Keep the rounded corners consistent */
 }
 
+.bg-neutral-background-strong {
+  background-color: rgba(61, 64, 97, 0.062) !important; /* Transparent dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  backdrop-filter: blur(20px); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
 
 .i18n-list-item-post-content,
 .i18n-list-item-post-title {
@@ -428,8 +437,3 @@ award-button {
 shreddit-post-share-button {
   display: none !important;
 }
-
-
-
-
-
