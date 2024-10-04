@@ -7,4 +7,3 @@ Currently implemented as ARC Boosts.
 - Todoist
 - ChatGPT
 - Reddit
-

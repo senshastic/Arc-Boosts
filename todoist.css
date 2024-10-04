@@ -2,8 +2,215 @@
     display: block; /* or inline-block */
     transition: margin-left 0.2s ease;
 }
-
-
 .CyYcjJUieBpMa9EpeaMCgT06VDxGmHUC:hover {
     margin-left: 10px !important;
+}
+
+
+
+main,
+._zbmK5I {
+    background: linear-gradient(109.6deg, #081336 13.4%, #0d0d29 25%, #1a3a66 70%,  rgb(122, 2, 54) 100.2%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+}
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+._zbmK5I,
+main {
+  overflow: hidden !important; /* Prevent noise overflow issues */
+}
+
+._zbmK5I::before,
+main::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important; /* Allow interaction with underlying content */
+  z-index: 1 !important; /* Place noise effect above background but below other content */
+  background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important; /* Apply noise SVG as background */
+  opacity: 0.2 !important; /* Adjust opacity for a subtle grain effect */
+}
+
+
+.fb8d74bb {
+  background: #2600ff00 !important; /* Bright red for troubleshooting */
+}
+
+._14423c92 {
+  background: #00ff2200 !important; /* Bright red for troubleshooting */
+}
+
+._5f8879d9 {
+  background-color: #ff00dd00 !important; /* Bright red for troubleshooting */
+}
+
+.task_list_item__content {
+  background-color: #fbff0000 !important; /* Bright red for troubleshooting */
+}
+
+.fwBw5Mb {
+  background-color: #00ffff00 !important; /* Bright red for troubleshooting */
+}
+
+header {
+  background-color: #00ffff00 !important; /* Bright red for troubleshooting */
+}
+
+._8c75067a {
+  background-color: #00ffff00 !important; /* Bright red for troubleshooting */
+}
+
+.task_list_item {
+  background-color: #00ffff00 !important; /* Bright red for troubleshooting */
+}
+
+.task_list_item {
+  background-color: rgba(255, 0, 0, 0.055) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(15px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+  padding: 5px; /* Optional: spacing for inner content */
+  margin-top: 3px; /* Added spacing between items */
+
+}
+
+.task_list_item:hover {
+  box-shadow: 0 0px 10px rgba(0, 204, 255, 0.6); /* Bright blue glow on hover */
+  background-color: rgba(0, 81, 255, 0.1); /* Slightly darker background on hover for better visibility */
+}
+
+
+.full_width_actions {
+  margin-top: 13px; /* Added spacing between items */
+}
+
+.manager {
+  margin-top: 20px; /* Added spacing between items */
+}
+
+/* Search bar */
+
+.Gg2ouAZt3AfA8s1TkmrhQgWAfyxvx777 {
+  background-color: rgba(5, 5, 5, 0.281) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(100px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(100px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+
+}
+
+.reactist_menulist {
+  background-color: rgba(5, 5, 5, 0.281) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(100px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(100px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+  padding: 5px; /* Optional: spacing for inner content */
+
+}
+
+.ElZ8nipNhBcVTHErb8wvnguehEVDW9PB {
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.ElZ8nipNhBcVTHErb8wvnguehEVDW9PB:hover {
+  background-color: rgba(18, 47, 212, 0.199); /* Very subtle lightening for the background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slight increase in shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft light border to enhance the visual effect */
+}
+
+.Rw9FyHe.FAtDxMs.fb8d74bb {
+   background-color: rgba(5, 5, 5, 0.281) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(100px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(100px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+  padding: 5px; /* Optional: spacing for inner content */
+}
+
+
+.UG7FuCUdhr5bkYCXyq0cwle86kiV2_2j,
+.task_editor__editing_area,
+.is-empty is-editor-empty,
+.task_editor__description_field, 
+.EJHqXpA, 
+.reminders_picker,
+.dropdown_select_input,
+.dropdown_select--popup,
+.scheduler, 
+.no-focus-marker,
+.menu_list, 
+.Wc4wki5,
+.zlBVInu,
+.task_editor {
+  background-color: rgba(5, 5, 5, 0.281) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(100px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(100px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+  padding: 5px; /* Optional: spacing for inner content */
+}
+
+
+.board_section,
+.board_add_section_button {
+  background-color: rgba(5, 5, 5, 0.452) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(100px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(100px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+  padding: 5px; /* Optional: spacing for inner content */
+  margin-top: 2px; /* Added spacing between items */
+}
+
+.board_section:hover,
+.board_add_section_button:hover {
+  box-shadow: 0 0px 10px rgba(0, 204, 255, 0.6); /* Bright blue glow on hover */
+  background-color: rgba(0, 81, 255, 0.1); /* Slightly darker background on hover for better visibility */
+}
+
+
+.board_task__button {
+  background-color: rgba(12, 63, 158, 0.329) !important; /* Transparent dark background */
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(15px) saturate(110%); /* Acrylic blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Webkit compatibility */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for background and box shadow */
+  padding: 5px; /* Optional: spacing for inner content */
+  margin-top: 3px; /* Added spacing between items */
+
+}
+
+.board_task__button:hover {
+  box-shadow: 0 0px 10px rgba(0, 204, 255, 0.6); /* Bright blue glow on hover */
+  background-color: rgba(0, 81, 255, 0.1); /* Slightly darker background on hover for better visibility */
+}
+
+
+@font-face {
+  font-family: 'CC Wild Words';
+  src: local('c');
+  font-weight: normal;
+  font-style: normal;
+}
+
+._97298b1b,
+._6d357d76 {
+  font-family: 'CC Wild Words', sans-serif !important; /* Apply the custom font with fallback */
 }
