@@ -1,5 +1,3 @@
-
-
 #reddit-logo {
   position: relative; 
   width: 35px;  /* Set width similar to Discord example */
@@ -49,11 +47,7 @@
 }
 
 
-
-
-
-
-.absolute {
+shreddit-post.group {
   background: rgba(255, 10, 10, 0); /* Highly transparent blue background */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Very light border for subtle structure */
   border-radius: 12px; /* Rounded corners */
@@ -62,16 +56,16 @@
   position: relative; /* Required for pseudo-elements */
 }
 
-.absolute:hover {
-  box-shadow: 
-      0 0 15px rgba(20, 48, 131, 0.8),  /* Primary glow */
-      0 0 25px rgba(65, 105, 225, 0.6),  /* Secondary, softer glow */
-      0 0 35px rgba(65, 105, 225, 0.4);  /* Tertiary, even softer glow */
-  border: 2px solid rgba(65, 105, 225, 1); /* More intense border on hover */
+
+shreddit-post:hover {
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.6) !important; 
 }
 
 
-.group {
+
+
+
+shreddit-post.group {
   background-color: rgba(91, 91, 92, 0.219) !important; /* Highly transparent blue background */
   backdrop-filter: blur(25px) brightness(1.1) saturate(160%); /* Enhanced acrylic effect with stronger blur, increased brightness, and more saturation */
   -webkit-backdrop-filter: blur(25px) brightness(1.4) saturate(160%); /* Webkit compatibility */
@@ -110,7 +104,8 @@ faceplate-menu {
   background-color: rgba(255, 0, 0, 0) !important; /* Fully transparent background */
 }
 
-.recent-posts-right-rail {
+.recent-posts-right-rail,
+.bg-neutral-background-weak {
   background-color: rgba(48, 51, 50, 0.38) !important; /* Transparent dark background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   border-radius: 12px; /* Rounded corners for a smooth look */
@@ -129,6 +124,21 @@ faceplate-menu {
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition effect */
   padding: 4px;
  }
+
+
+blockquote {
+  font-family: 'Consolas', sans-serif !important; /* Apply the custom font with fallback */
+  border-left: 4px solid rgba(1, 0, 8, 0.199);
+}
+
+blockquote>p { quotes: '\201c' '\201d'; }
+blockquote>p:before { content: open-quote; }
+blockquote>p:after  { content: close-quote; }
+
+
+
+
+
 
 
 #reddit-logo img,
@@ -184,6 +194,32 @@ faceplate-menu {
 
 
 
+
+
+.block.ml-xs {
+  background-color: rgba(255, 0, 0, 0) !important; /* Highly transparent blue background */
+}
+
+
+shreddit-post.block,
+comment-body-header.block,
+shreddit-comment-tree,
+.cursor-text {
+  background-color: rgba(91, 91, 92, 0.219) !important; /* Highly transparent blue background */
+  backdrop-filter: blur(25px) brightness(1.1) saturate(160%); /* Enhanced acrylic effect with stronger blur, increased brightness, and more saturation */
+  -webkit-backdrop-filter: blur(25px) brightness(1.4) saturate(160%); /* Webkit compatibility */
+  border-radius: 12px !important; /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(58, 57, 57, 0.329); /* Soft shadow for a glass lift effect */
+  transition: background-color 0.3s ease-in-out;
+  z-index: 0; /* Lower stacking context than faceplate-menu */
+  position: relative; /* Creates a controlled stacking context */
+  padding: 2px;
+}
+
+
+.bg-neutral-background {
+  background-color: rgba(91, 91, 92, 0) !important; /* Highly transparent blue background */
+}
 
 /* Blurring the background when search bar is focused */
 body:has(.search-input:focus),
