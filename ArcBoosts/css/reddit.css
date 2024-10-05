@@ -1,0 +1,385 @@
+/* Remove all the useless shit */
+.flex-col faceplate-expandable-section-helper [noun="multireddits_menu"] .text-secondary,
+.faceplate-expandable-section-helper faceplate-auto-height-animator #communities_section left-nav-create-community-button,
+.flex-col faceplate-expandable-section-helper [aria-controls="communities_section"] .text-secondary,
+faceplate-expandable-section-helper faceplate-auto-height-animator #communities_section left-nav-communities-controller, 
+#left-sidebar-container #left-sidebar .flex-col reddit-recent-pages, 
+#multireddits_section faceplate-tracker custom-feed-edit-button .text-secondary,
+faceplate-expandable-section-helper faceplate-auto-height-animator #communities_section left-nav-create-community-button,
+.flex-col faceplate-expandable-section-helper [noun="resources_menu"] .text-secondary,
+faceplate-auto-height-animator [faceplate-auto-height-animator-content=""]:has(faceplate-tracker .no-underline),
+.contents .contents .contents #advertise-button,
+#left-sidebar-container #left-sidebar .min-h-screen-without-header hr,
+reddit-chat-header-button .contents .contents #header-action-item-chat-button,
+.contents reddit-chat-header-button div:has(.contents) {
+		display: none !important;
+	}
+
+
+
+/* Reddit Logo Styling */
+#reddit-logo {
+  position: relative; 
+  width: 35px;  
+  height: 35px; 
+}
+
+/* Hover Animation for Reddit Tabs */
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary.hover\:text-secondary-hover.active\:bg-interactive-pressed.hover\:bg-neutral-background-hover.hover\:no-underline.cursor-pointer.py-2xs.\-outline-offset-1.s\:rounded-\[8px\].bg-transparent.no-underline {
+  transition: transform 0.3s ease; 
+}
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary.hover\:text-secondary-hover.active\:bg-interactive-pressed.hover\:bg-neutral-background-hover.hover\:no-underline.cursor-pointer.py-2xs.\-outline-offset-1.s\:rounded-\[8px\].bg-transparent.no-underline:hover {
+  transform: translateX(5px); 
+}
+
+/* Animation Gradient Sidebar */
+.nd\:visible.block.w-full.sticky.top-\[56px\].h-screen-without-header.styled-scrollbars.overflow-y-scroll.overflow-x-hidden.bg-neutral-background.box-border.px-md,
+.grid-container {
+  background: linear-gradient(109.6deg, #081336 13.4%, #0d0d29 25%, #1a3a66 70%, rgb(122, 2, 54) 100.2%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+}
+.v2 {
+  background: linear-gradient(109.6deg, #081336 13.4%, #0d0d29 25%, #1a3a66 70%, rgb(122, 2, 54) 100.2%) !important;
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Hover & Active States for Tabs */
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary-onBackground.bg-neutral-background-selected.hover\:bg-neutral-background-selected.hover\:bg-neutral-background-hover.hover\:no-underline.cursor-pointer.py-2xs.\-outline-offset-1.s\:rounded-\[8px\].no-underline {
+  background: linear-gradient(109.6deg, #081336 13.4%, #0d0d29 25%, #1a3a66 70%, rgb(122, 2, 54) 100.2%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary-onBackground.bg-neutral-background-selected.hover\:bg-neutral-background-selected.hover\:bg-neutral-background-hover.hover\:no-underline.cursor-pointer.py-2xs.\-outline-offset-1.s\:rounded-\[8px\].no-underline:active {
+  background: linear-gradient(109.6deg, #081336 13.4%, #0d0d29 25%, #1a3a66 70%, rgb(122, 2, 54) 100.2%) !important;
+}
+
+/* Post Styling & Hover Effects */
+shreddit-post.group {
+  background: rgba(255, 10, 10, 0); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 12px; 
+  overflow: hidden; 
+  transition: box-shadow 0.3s ease, border 0.3s ease; 
+  position: relative; 
+}
+shreddit-post:hover {
+  box-shadow: 0 0px 14px rgb(196, 238, 255) !important; 
+}
+
+/* Post Styling with Enhanced Acrylic Effect */
+shreddit-post.group {
+  background-color: rgba(91, 91, 92, 0.219) !important; 
+  backdrop-filter: blur(25px) brightness(1.1) saturate(160%); 
+  -webkit-backdrop-filter: blur(25px) brightness(1.4) saturate(160%); 
+  box-shadow: 0 8px 32px rgba(58, 57, 57, 0.329); 
+  transition: background-color 0.3s ease-in-out;
+  z-index: 0; 
+  position: relative; 
+}
+
+/* Faceplate Menu & Tooltip Styles */
+faceplate-menu,
+div#faceplate-tooltip {
+  background-color: rgba(48, 51, 50, 0.38) !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px; 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+/* Active Element Styling within Faceplate Menu */
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary-onBackground.bg-neutral-background-selected:hover,
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary-onBackground.bg-neutral-background-selected:focus,
+.flex.justify-between.relative.px-md.gap-\[0\.5rem\].text-secondary-onBackground.bg-neutral-background-selected:active {
+  background-color: rgba(60, 63, 62, 0.5) !important; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.02); 
+  z-index: 100000 !important; 
+  border-radius: 12px; 
+}
+
+/* Strong Background Styles */
+.bg-neutral-background-strong {
+  background-color: rgba(61, 64, 97, 0.062) !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px; 
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(10px); 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+/* Post Content & Title Transparency */
+.i18n-list-item-post-content,
+.i18n-list-item-post-title {
+  background-color: rgba(255, 0, 0, 0) !important; 
+}
+
+/* Sidebar & Weak Background Styling */
+.recent-posts-right-rail,
+.bg-neutral-background-weak {
+  background-color: rgba(48, 51, 50, 0.38) !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px; 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+/* Flex Wrapper Styling for Hover State */
+.flex.flex-wrap.group.text-neutral-content-weak.hover\:text-neutral-content-weak.dark\:text-neutral-content-strong.dark\:hover\:text-neutral-content-strong.xs\:dark\:text-neutral-content-weak.xs\:dark\:hover\:text-neutral-content-weak.a.cursor-pointer.no-visited.no-underline.hover\:no-underline {
+  background-color: rgba(255, 118, 182, 0.034) !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px; 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+  padding: 4px;
+}
+
+/* Blockquote Styling */
+
+
+blockquote {
+  font-family: 'Consolas', sans-serif !important; /* Apply the custom font with fallback */
+  border-left: 4px solid rgba(1, 0, 8, 0.199);
+}
+
+blockquote>p { quotes: '\201c' '\201d'; }
+blockquote>p:before { content: open-quote; }
+blockquote>p:after  { content: close-quote; }
+
+/* Reddit Logo Replacement */
+#reddit-logo img,
+#reddit-logo .snoo-cls-10 {
+  display: none; 
+}
+
+/* Replacement Image for Reddit Logo - change animation duration from 0 to 6s if want to animate */
+#reddit-logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cdn.discordapp.com/emojis/1245456048383459439.webp?size=96&quality=lossless');
+  background-size: 100%; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  -webkit-animation-name: y-spin; 
+  animation-name: y-spin; 
+  -webkit-animation-duration: 6s; 
+  animation-duration: 0s; 
+  -webkit-animation-timing-function: ease-in-out; 
+  animation-timing-function: ease-in-out; 
+  -webkit-animation-iteration-count: infinite; 
+  animation-iteration-count: infinite; 
+}
+
+/* Keyframes for Spin Effect */
+@-webkit-keyframes y-spin {
+  0% {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+  }
+  100% {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+  }
+}
+@keyframes y-spin {
+  0% {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+  }
+  100% {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+  }
+}
+
+/* Highly Transparent Background Styling */
+.block.ml-xs {
+  background-color: rgba(255, 0, 0, 0) !important; 
+}
+
+/* Additional Post and Comment Styling */
+shreddit-post.block,
+comment-body-header.block,
+shreddit-comment-tree,
+.cursor-text {
+  background-color: rgba(91, 91, 92, 0.219) !important; 
+  backdrop-filter: blur(25px) brightness(1.1) saturate(160%); 
+  -webkit-backdrop-filter: blur(25px) brightness(1.4) saturate(160%); 
+  border-radius: 12px !important; 
+  box-shadow: 0 8px 32px rgba(58, 57, 57, 0.329); 
+  transition: background-color 0.3s ease-in-out;
+  z-index: 0; 
+  position: relative; 
+  padding: 2px;
+}
+
+/* Neutral Background Styling */
+.bg-neutral-background {
+  background-color: rgba(91, 91, 92, 0) !important; 
+}
+
+/* Blurring Background When Search Bar is Focused */
+body:has(.search-input:focus),
+body:has(.search-container:focus-within) {
+  filter: blur(10px);
+}
+
+/* Search Container Styling to Exclude from Blur */
+.search-input,
+.search-container,
+[class*="flex justify-between relative px-md gap-[0.5rem]"] {
+  filter: none !important;
+  position: relative;
+  z-index: 100;
+}
+
+/* Search Input Styling */
+.search-input {
+  font-size: 14px;
+  width: 300px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Dropdown Items */
+[class*="flex justify-between relative px-md gap-[0.5rem]"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important; 
+}
+
+/* Search Bar Acrylic and Default Styles */
+.reddit-search-bar {
+  backdrop-filter: blur(10px) brightness(1.2) saturate(1.3) !important; 
+  background: rgba(253, 253, 253, 0.062) !important; 
+  border-radius: 1.25rem !important; 
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.562) !important; 
+  transition: all 0.1s ease-in-out !important; 
+}
+
+/* Move Search Bar to Center When Focused */
+.reddit-search-bar:focus-within {
+  position: fixed !important; 
+  top: 50% !important;        
+  left: 50% !important;       
+  transform: translate(-50%, -50%) !important; 
+  width: 50% !important;      
+  max-width: 600px !important;
+  z-index: 1000 !important;   
+}
+
+/* Styling the Dropdown When Search Bar is Focused */
+.reddit-search-bar:focus-within .dropdown-class {
+  position: fixed !important; 
+  top: calc(50% + 40px) !important; 
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  width: 50% !important;
+  max-width: 600px !important;
+  z-index: 999 !important; 
+  display: block !important; 
+  backdrop-filter: blur(10px) brightness(1.2) saturate(1.3) !important; 
+  background: rgba(255, 255, 255, 0.2) !important; 
+  border-radius: 0.5rem !important; 
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; 
+}
+
+/* Correct Positioning of Child Elements Within Search Bar */
+.reddit-search-bar * {
+  position: static !important; 
+}
+
+/* Reset to Default Positioning When Not Focused */
+.reddit-search-bar:not(:focus-within) {
+  position: static !important; 
+  transform: none !important;  
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  z-index: auto !important;
+}
+
+/* Font Styles for Various Text Sizes */
+@font-face {
+  font-family: 'CC Wild Words';
+  src: local('c');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CMU Concrete';
+  src: local('c');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Whitney';
+  src: local('c');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-12 {
+  font-family: 'CC Wild Words', sans-serif !important; 
+}
+.text-14 {
+  font-family: 'Arial Rounded MT Bold', sans-serif !important; 
+}
+.text-18, .text-16 {
+  font-family: 'CMU Concrete', sans-serif !important; 
+}
+
+/* Grid Container Styling */
+.grid-container {
+  position: relative; 
+}
+
+/* Noise Effect Background Styling */
+.nd\:visible.block.w-full.sticky.top-\[56px\].h-screen-without-header.styled-scrollbars.overflow-y-scroll.overflow-x-hidden.bg-neutral-background.box-border.px-md,
+.v2.bg-neutral-background.pointer-events-auto.border-solid.border-0.border-b.border-neutral-border.px-md {
+  overflow: hidden !important; 
+}
+
+.nd\:visible.block.w-full.sticky.top-\[56px\].h-screen-without-header.styled-scrollbars.overflow-y-scroll.overflow-x-hidden.bg-neutral-background.box-border.px-md::before,
+.v2.bg-neutral-background.pointer-events-auto.border-solid.border-0.border-b.border-neutral-border.px-md::before,
+.grid-container::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important; 
+  z-index: 1 !important; 
+  background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important; 
+  opacity: 0.2 !important; 
+}
+
+/* Remove Award & Share Buttons */
+award-button,
+shreddit-post-share-button {
+  display: none !important;
+}
+
+
+/* Move the back button a bit to accomodate padding */
+
+shreddit-post .text-12 .items-center pdp-back-button {
+  margin-right: 10px;
+}

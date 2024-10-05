@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        Collapsible Sidebar for ChatGPT with Acrylic Effect
+// @name        Collapsible Sidebar for ChatGPT
 // @version     1.1
-// @description Collapse the sidebar and apply an acrylic effect, handling multiple toggle buttons.
+// @description Collapse the sidebar 
 // @match       https://chat.openai.com/*
 // @author      sensha + FallenStar
 // @grant       none
