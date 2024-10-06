@@ -7,27 +7,26 @@
 // @author      sensha
 // @grant       none
 // ==/UserScript==
+// Self-invoking function to initialize functionalities
 
 (function() {
     'use strict';
 
+    // Function to initialize sidebar styling and interactions
     function initializeSidebar() {
-        // Select the sidebar element
         let sidebar = document.querySelector('.sgZf_PQ');
-
-        // Select the sidebar toggle button
         let sidebarToggleButton = document.querySelector('button[aria-controls="sidebar"]');
 
         if (sidebar && sidebarToggleButton) {
-            // Sidebar styling with acrylic effect
+            // Apply acrylic effect and styling to the sidebar
             sidebar.style.position = 'fixed';
             sidebar.style.top = '0';
-            sidebar.style.left = '0'; // Adjust to left side for Todoist
-            sidebar.style.width = '280px'; // Adjust the width
-            sidebar.style.height = '100vh'; // Full height
-            sidebar.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; // Transparent background for acrylic effect
-            sidebar.style.backdropFilter = 'blur(25px) saturate(200%) contrast(90%)'; // Acrylic effect
-            sidebar.style.webkitBackdropFilter = 'blur(25px) saturate(200%) contrast(90%)'; // Safari compatibility
+            sidebar.style.left = '0';
+            sidebar.style.width = '280px';
+            sidebar.style.height = '100vh';
+            sidebar.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            sidebar.style.backdropFilter = 'blur(25px) saturate(200%) contrast(90%)';
+            sidebar.style.webkitBackdropFilter = 'blur(25px) saturate(200%) contrast(90%)';
             sidebar.style.color = 'white';
             sidebar.style.opacity = '0';
             sidebar.style.pointerEvents = 'none';
@@ -35,170 +34,152 @@
             sidebar.style.zIndex = '1000';
             sidebar.style.overflowY = 'auto';
             sidebar.style.scrollbarWidth = "none";
-            sidebar.style.border = '1px solid rgba(255, 255, 255, 0.2)'; // Light border
-            sidebar.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'; // Subtle shadow
+            sidebar.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+            sidebar.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
 
-            // Trigger zone for the sidebar
+            // Create and append trigger zone for sidebar interaction
             let triggerZone = document.createElement('div');
             triggerZone.style.position = 'fixed';
             triggerZone.style.top = '0';
-            triggerZone.style.left = '0'; // Adjust to left side for Todoist
+            triggerZone.style.left = '0';
             triggerZone.style.width = '50px';
-            triggerZone.style.height = '100vh'; // Full height
+            triggerZone.style.height = '100vh';
             triggerZone.style.backgroundColor = 'rgba(255, 255, 255, 0.0)';
             triggerZone.style.zIndex = '0';
             triggerZone.style.pointerEvents = 'none';
 
             document.body.appendChild(triggerZone);
 
-            // Update the opacity of the trigger zone based on mouse position
+            // Update trigger zone opacity based on mouse position
             function updateTriggerZoneOpacity(distance) {
                 let opacity = Math.max(0, (300 - distance) / 300);
                 triggerZone.style.backgroundColor = `rgba(255, 255, 255, ${opacity * 0.1})`;
             }
 
-            // Show/hide the sidebar smoothly
+            // Show or hide the sidebar based on mouse movement
             function handleMouseMove(e) {
                 const leftEdgeDistance = e.clientX;
 
-                // Show sidebar
                 if (leftEdgeDistance < 50) {
                     sidebar.style.opacity = '1';
-                    sidebar.style.pointerEvents = 'auto'; // Enable interactions
+                    sidebar.style.pointerEvents = 'auto';
                     triggerZone.style.display = "none";
 
-                    // Ensure the sidebar toggle button is in the "open" state
                     if (sidebarToggleButton.getAttribute('aria-expanded') === 'false') {
-                        sidebarToggleButton.click(); // Simulate button click to open the sidebar
+                        sidebarToggleButton.click();
                     }
-                }
-                // Hide sidebar
-                else if (leftEdgeDistance > 280) { // Adjusted to the new width
+                } else if (leftEdgeDistance > 280) {
                     sidebar.style.opacity = '0';
-                    sidebar.style.pointerEvents = 'none'; // Disable interactions
+                    sidebar.style.pointerEvents = 'none';
                     triggerZone.style.display = "block";
 
-                    // Ensure the sidebar toggle button is in the "closed" state
                     if (sidebarToggleButton.getAttribute('aria-expanded') === 'true') {
-                        sidebarToggleButton.click(); // Simulate button click to close the sidebar
+                        sidebarToggleButton.click();
                     }
                 }
 
-                // Update opacity of trigger zone
                 updateTriggerZoneOpacity(leftEdgeDistance);
             }
 
             document.addEventListener('mousemove', handleMouseMove);
         } else {
-            // Retry after a short delay if the sidebar or button is not found
-            setTimeout(initializeSidebar, 500); // 500ms delay
+            // Retry if sidebar or toggle button is not found
+            setTimeout(initializeSidebar, 500);
         }
     }
 
+    // Function to apply acrylic effect to a specific element
     function initializeAcrylicElement() {
-        // Select the additional element with the provided classes
         let acrylicElement = document.querySelector('.afs9Aky.fb8d74bb.e4e217d4.b9ff0c93');
 
         if (acrylicElement) {
-            // Apply acrylic effect to this element
             acrylicElement.style.position = 'relative';
-            acrylicElement.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; // Transparent background for acrylic effect
-            acrylicElement.style.backdropFilter = 'blur(25px) saturate(200%) contrast(90%)'; // Acrylic effect
-            acrylicElement.style.webkitBackdropFilter = 'blur(25px) saturate(200%) contrast(90%)'; // Safari compatibility
-            acrylicElement.style.border = '1px solid rgba(255, 255, 255, 0.2)'; // Light border for visibility
-            acrylicElement.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'; // Subtle shadow for depth
-            acrylicElement.style.zIndex = '100'; // Ensure it appears on top of other elements
-            acrylicElement.style.borderRadius = '8px'; // Optional: Rounded corners for a polished look
+            acrylicElement.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            acrylicElement.style.backdropFilter = 'blur(25px) saturate(200%) contrast(90%)';
+            acrylicElement.style.webkitBackdropFilter = 'blur(25px) saturate(200%) contrast(90%)';
+            acrylicElement.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+            acrylicElement.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+            acrylicElement.style.zIndex = '100';
+            acrylicElement.style.borderRadius = '8px';
         } else {
-            // Retry after a short delay if the element is not found
-            setTimeout(initializeAcrylicElement, 500); // 500ms delay
+            // Retry if the acrylic element is not found
+            setTimeout(initializeAcrylicElement, 500);
         }
     }
 
+    // Function to replace the sidebar toggle button with an image
     function replaceButtonWithImage() {
-        // Select the button using a broader selector for stability
         let button = document.querySelector('button[aria-controls="sidebar"]');
 
         if (button) {
-            // Remove any existing SVG inside the button
             let svg = button.querySelector('svg');
             if (svg) {
                 svg.remove();
             }
 
-            // Make the button's background transparent
             button.style.background = 'none';
             button.style.border = 'none';
             button.style.padding = '0';
 
-            // Create a new img element
             let newImage = document.createElement('img');
             newImage.src = 'https://cdn.discordapp.com/emojis/1245456048383459439.webp?size=240&quality=lossless';
             newImage.alt = 'Button Image';
-            newImage.style.width = '24px';  // Set the desired size for the image
+            newImage.style.width = '24px';
             newImage.style.height = '24px';
             newImage.style.cursor = 'pointer';
 
-            // Append the new image to the button
             button.appendChild(newImage);
         } else {
-            // Retry if the button is not found immediately
-            setTimeout(replaceButtonWithImage, 500); // 500ms delay
+            // Retry if the button is not found
+            setTimeout(replaceButtonWithImage, 500);
         }
     }
 
+    // Function to add a footer to the page
     function addFooter() {
-    let mainElement = document.querySelector('main');
+        let mainElement = document.querySelector('main');
 
-    if (mainElement) {
-        let footer = document.createElement('div');
-        footer.style.position = 'fixed';
-        footer.style.bottom = '10px';
-        footer.style.right = '10px';
-        footer.style.fontSize = '12px';
-        footer.style.color = 'rgba(255, 255, 255, 0.7)';
-        footer.style.zIndex = '2000';
+        if (mainElement) {
+            let footer = document.createElement('div');
+            footer.style.position = 'fixed';
+            footer.style.bottom = '10px';
+            footer.style.right = '10px';
+            footer.style.fontSize = '12px';
+            footer.style.color = 'rgba(255, 255, 255, 0.7)';
+            footer.style.zIndex = '2000';
 
-        // Create the link for "SneshCorp."
-        let linkSensha = document.createElement('a');
-        linkSensha.href = 'https://github.com/senshastic';
-        linkSensha.innerText = 'SneshCorp. @1984. All rights reserved (to ';
-        linkSensha.style.textDecoration = 'none';
-        linkSensha.style.color = 'rgba(255, 255, 255, 0.7)';
+            let linkSensha = document.createElement('a');
+            linkSensha.href = 'https://github.com/senshastic';
+            linkSensha.innerText = 'SneshCorp. @1984. All rights reserved (to ';
+            linkSensha.style.textDecoration = 'none';
+            linkSensha.style.color = 'rgba(255, 255, 255, 0.7)';
 
-        // Create the link for "FallenStar"
-        let linkFallenStar = document.createElement('a');
-        linkFallenStar.href = 'https://github.com/senshastic';
-        linkFallenStar.innerText = 'FallenStar';
-        linkFallenStar.style.textDecoration = 'none';
-        linkFallenStar.style.color = 'rgba(255, 255, 255, 0.7)';
-
-        // Change href on hover
-        linkFallenStar.addEventListener('mouseenter', function() {
-            linkFallenStar.href = 'https://github.com/FallenStar08';
-        });
-
-        linkFallenStar.addEventListener('mouseleave', function() {
+            let linkFallenStar = document.createElement('a');
             linkFallenStar.href = 'https://github.com/senshastic';
-        });
+            linkFallenStar.innerText = 'FallenStar';
+            linkFallenStar.style.textDecoration = 'none';
+            linkFallenStar.style.color = 'rgba(255, 255, 255, 0.7)';
 
-        // Add punctuation and complete footer text
-        let endText = document.createTextNode(').');
+            linkFallenStar.addEventListener('mouseenter', function() {
+                linkFallenStar.href = 'https://github.com/FallenStar08';
+            });
 
-        // Append everything to the footer
-        footer.appendChild(linkSensha);
-        footer.appendChild(linkFallenStar);
-        footer.appendChild(endText);
+            linkFallenStar.addEventListener('mouseleave', function() {
+                linkFallenStar.href = 'https://github.com/senshastic';
+            });
 
-        // Append footer to the main element
-        mainElement.appendChild(footer);
-    } else {
-        // Retry if the main element is not found
-        setTimeout(addFooter, 500); // 500ms delay
+            let endText = document.createTextNode(').');
+
+            footer.appendChild(linkSensha);
+            footer.appendChild(linkFallenStar);
+            footer.appendChild(endText);
+
+            mainElement.appendChild(footer);
+        } else {
+            // Retry if the main element is not found
+            setTimeout(addFooter, 500);
+        }
     }
-}
-
-
 
     // Initialize all functionalities
     initializeSidebar();
