@@ -158,7 +158,8 @@ padding: 5px; /* Optional: spacing for inner content */
 .form_field_control,
 div[data-open="true"][role="dialog"][data-wide-modal],
 div[data-open="true"][role="dialog"][data-enter="true"],
-.IV3aBjz {
+.IV3aBjz,
+div[role="listbox"][data-dialog][data-open="true"] {
 background-color: rgba(5, 5, 5, 0.281) !important; 
 border-radius: 12px; 
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
