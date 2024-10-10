@@ -1,5 +1,7 @@
 # Snesh's little CSS (and JS) fourre-tout 
 
+## This is my mess and shouldn't be public tbh 
+
 <br> 
 
 Currently implemented as ARC Boosts. 
